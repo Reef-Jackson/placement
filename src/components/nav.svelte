@@ -45,18 +45,16 @@
       color: #df5757;
     }
   
-    /* Add the tactile button press effect to menu-icon and menu-item for screens with a maximum width of 768px (typical for mobile devices) */
     @media (max-width: 768px) {
       .menu-icon,
       .menu-item {
         transition: transform 0.2s ease, color 0.1s;
       }
   
-      /* Change the color and scale when pressed */
       .menu-icon:active,
       .menu-item:active {
-        color: #df5757; /* Change color when pressed */
-        transform: scale(0.9); /* Slight scale-down effect when pressed */
+        color: #df5757; 
+        transform: scale(0.9); 
       }
     }
   
