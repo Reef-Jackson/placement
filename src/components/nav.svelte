@@ -68,6 +68,7 @@
       display: none;
       flex-direction: column;
       align-items: right;
+      animation: fadeOut 0.5s ease;
     }
   
     .menu-items.active {
@@ -84,6 +85,14 @@
       }
       to {
         opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      } to {
+        opacity: 0;
       }
     }
   
