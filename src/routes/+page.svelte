@@ -3,30 +3,30 @@
 	import Nav from "../components/nav.svelte";
 	import Typewriter from "svelte-typewriter";
 	import { fade } from "svelte/transition";
+  import { onMount } from "svelte";
 
 	let mode;
-
 	let open;
 </script>
 
 <!-- <Hamburger bind:open --color="white" />
 <Menu bind:open /> -->
 
-<Nav />
+<Nav/>
 
 <div class="wrapper">
-	<div class="hero">
+	<div class="hero" id="#home">
 		<div class="container">
 			<div class="header-container">
 				<Typewriter mode={"cascade"}>
 					<h1>Reef Jackson</h1>
 					<p>Software Engineering Student</p>
-					<p2>I create stuff with computers!</p2>
+					<p2>I make computers do things!</p2>
 				</Typewriter>
 			</div>
 		</div>
 	</div>
-	<div class="about-me">
+	<div class="about-me" id="#about">
 		<div class="about-container">
 			<div class="text">
 				<h1>About me!</h1>

@@ -12,5 +12,6 @@
         box-sizing: border-box;
         background-color: #111020;
         user-select: none;
+        scroll-behavior: smooth;
     }
 </style>
