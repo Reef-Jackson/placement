@@ -35,7 +35,7 @@
 		<div class="about-container">
 			<div class="text">
 				<h1>About me!</h1>
-				<h3>I'm Reef!<br><br> A software engineering student on a perpetual quest for knowledge. With a solid academic foundation, technical prowess in <a href="#home" on:click|preventDefault={scrollIntoView}>various technologies</a>, and <a href="#work" on:click|preventDefault={scrollIntoView}><i>hands-on project experience</i></a>, I thrive on always learning something new. <br><br>I'm a firm believer in the importance of always learning. Beyond coding, you can find me immersed in Warhammer40K, Star Wars, and anything that can run DOOM.</h3>
+				<h3>I'm Reef!<br><br> A software engineering student on a perpetual quest for knowledge. With a solid academic foundation, technical prowess in <a href="#home" on:click|preventDefault={scrollIntoView}>various technologies</a>, and <a href="#home" on:click|preventDefault={scrollIntoView}><i>hands-on project experience</i></a>, I thrive on always learning something new. <br><br>I'm a firm believer in the importance of always learning. Beyond coding, you can find me immersed in Warhammer40K, Star Wars, and anything that can run DOOM.</h3>
 			</div>
 			<div class="image">image</div>
 		</div>
