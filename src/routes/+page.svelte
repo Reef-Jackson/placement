@@ -1,5 +1,4 @@
 <script>
-	import { Hamburger } from "svelte-hamburgers";
 	import Nav from "../components/nav.svelte";
 	import Typewriter from "svelte-typewriter";
 	import { fade } from "svelte/transition";
@@ -9,8 +8,6 @@
 	let open;
 </script>
 
-<!-- <Hamburger bind:open --color="white" />
-<Menu bind:open /> -->
 
 <Nav/>
 
@@ -109,6 +106,12 @@
 	 .about-container {
 		flex-wrap: wrap;
 	 }
+	}
+
+	@media (max-width: 667px) {
+		.hero {
+			background-position: -180vw;
+		}
 	}
 
 </style>
