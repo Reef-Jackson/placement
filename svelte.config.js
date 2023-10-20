@@ -11,7 +11,6 @@ const config = {
 		adapter: adapter({
 			pages: "docs",
 			assets: "docs",
-			strict: false
 		}),
 		paths: {
 			base: dev ? "" : "/placement",
