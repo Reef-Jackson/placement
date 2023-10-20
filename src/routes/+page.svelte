@@ -110,7 +110,7 @@
 
 	@media (max-width: 667px) {
 		.hero {
-			background-position: -180vw;
+			background-position: -110vw;
 		}
 	}
 
