@@ -2,17 +2,25 @@
 	import Nav from "../components/nav.svelte";
 	import Typewriter from "svelte-typewriter";
 	import { fade } from "svelte/transition";
-  import { onMount } from "svelte";
+  	import { onMount } from "svelte";
 
 	let mode;
 	let open;
+
+	function scrollIntoView({target}) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+		el.scrollIntoView({
+			behaviour: 'smooth'
+		});
+	}
 </script>
 
 
 <Nav/>
 
 <div class="wrapper">
-	<div class="hero" id="#home">
+	<div class="hero" id="home">
 		<div class="container">
 			<div class="header-container">
 				<Typewriter mode={"cascade"}>
@@ -23,11 +31,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="about-me" id="#about">
+	<div class="about-me" id="about">
 		<div class="about-container">
 			<div class="text">
 				<h1>About me!</h1>
-				<h3>Hi I'm Reef! I'm currently a student at SHU and am eagerly searching for my first placement opportunity!</h3>
+				<h3>I'm Reef!<br><br> A software engineering student on a perpetual quest for knowledge. With a solid academic foundation, technical prowess in <a href="#home" on:click|preventDefault={scrollIntoView}>various technologies</a>, and <a href="#work" on:click|preventDefault={scrollIntoView}><i>hands-on project experience</i></a>, I thrive on always learning something new. <br><br>I'm a firm believer in the importance of always learning. Beyond coding, you can find me immersed in Warhammer40K, Star Wars, and anything that can run DOOM.</h3>
 			</div>
 			<div class="image">image</div>
 		</div>
@@ -87,6 +95,16 @@
 			margin: 1rem;
 			border-radius: 1rem;
 			padding: 3rem;
+			box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+		}
+
+		.text a {
+			text-decoration: none;
+			color: yellow;
+		}
+
+		.text a:hover {
+			text-decoration: underline;
 		}
 
 
