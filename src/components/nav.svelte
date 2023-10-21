@@ -23,7 +23,7 @@
     <div class="menu-items {isOpen ? 'active' : ''}">
         <a href="#home" class="menu-item" on:click={toggleMenu}>Home</a>
         <a href="#about" class="menu-item" on:click={toggleMenu}>About Me</a>
-        <a href="#" class="menu-item" on:click={toggleMenu}>Work</a>
+        <a href="#tech" class="menu-item" on:click={toggleMenu}>Tech</a>
         <a href="#" class="menu-item" on:click={toggleMenu}>Contact</a>
     </div>
   </div>
