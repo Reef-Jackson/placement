@@ -55,12 +55,12 @@
   <div class="tech" id="tech">
 		<h2 style="font-size: 2rem; color: white; margin-bottom: .5rem">My tech:</h2>
     <div class="tech-container">
-      <!-- <a href="https://svelte.dev/"> -->
+      <a href="https://svelte.dev/">
       <button id="svelte">Svelte</button>
-      <!-- </a> -->
-      <!-- <a href="https://kit.svelte.dev"> -->
+      </a>
+      <a href="https://kit.svelte.dev">
       <button id="sveltekit">SvelteKit</button>
-      <!-- </a> -->
+      </a>
       <button id="nodejs">NodeJS</button>
       <button id="php">PHP</button>
       <button id="html">HTML</button>
