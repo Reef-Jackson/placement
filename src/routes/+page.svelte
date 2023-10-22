@@ -31,9 +31,9 @@
     </div>
   </div>
   <div class="about-me" id="about">
+    <h1 style="color: white; text-align:center; font-size: 2rem; margin-top: 3rem;">About me!</h1>
     <div class="about-container">
       <div class="text">
-        <h1>About me!</h1>
         <h3>
           I'm Reef!<br /><br /> A software engineering student on a perpetual
           quest for knowledge. With a solid academic foundation, technical
@@ -52,14 +52,26 @@
       <div class="image">image</div>
     </div>
   </div>
+  <div class="work-wrapper" id="work">
+    <h1 style="text-align: center; color: white;">My Work:</h1>
+    <div class="work" id="work">
+    <div class="work-item">Item</div>
+    <div class="work-item">item2</div>
+    <div class="work-item">item2</div>
+    <div class="work-item">item2</div>
+  </div>
+  </div>
+  
   <div class="tech" id="tech">
-		<h2 style="font-size: 2rem; color: white; margin-bottom: .5rem">My tech:</h2>
+    <h2 style="font-size: 2rem; color: white; margin-bottom: .5rem">
+      My tech:
+    </h2>
     <div class="tech-container">
       <a href="https://svelte.dev/">
-      <button id="svelte">Svelte</button>
+        <button id="svelte">Svelte</button>
       </a>
       <a href="https://kit.svelte.dev">
-      <button id="sveltekit">SvelteKit</button>
+        <button id="sveltekit">SvelteKit</button>
       </a>
       <button id="nodejs">NodeJS</button>
       <button id="php">PHP</button>
@@ -80,6 +92,7 @@
   }
   .hero {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +134,6 @@
     color: white;
     justify-content: center;
     margin-bottom: 4rem;
-    margin-top: 4rem;
   }
   .text,
   .image {
@@ -135,10 +147,14 @@
       rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
 
-	.text {
-		background: rgb(223,87,87);
-		background: linear-gradient(180deg, rgba(223,87,87,1) 0%, rgb(223, 137, 87) 100%);
-	}
+  .text {
+    background: rgb(223, 87, 87);
+    background: linear-gradient(
+      180deg,
+      rgba(223, 87, 87, 1) 0%,
+      rgb(223, 137, 87) 100%
+    );
+  }
 
   .image {
     background-image: url($lib/eva.png);
@@ -166,8 +182,8 @@
   .tech-container {
     height: fit-content;
     width: fit-content;
-		background: #df57578f;
-		border-radius: 1rem;
+    background: #df57578f;
+    border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
     flex-wrap: 1;
@@ -179,7 +195,7 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin: 0.4rem;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
     font-size: 1.2rem;
     font-family: "Ubuntu", monospace;
     color: white;
@@ -224,6 +240,48 @@
     background-color: #edd84d;
   }
 
+  .work {
+    background-color: #df5757;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work-item {
+    width: calc(
+      33.33% - 2rem
+    ); /* Adjust the width based on your desired layout */
+    height: 20rem;
+    border-radius: 1rem;
+    margin: 1rem; /* Adjust the margin to control spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("$lib/eva.png");
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.2s;
+  }
+
+
+  .work-item:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    .work-item {
+      width: calc(
+        50% - 2rem
+      ); /* Two items in a row on screens up to 768px wide */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .work-item {
+      width: 100%;
+      margin: 0.8rem; /* One item per row on screens up to 480px wide */
+    }
+  }
   @media (max-width: 768px) {
     .header-container h1 {
       font-size: 1.5rem;
@@ -249,14 +307,14 @@
     }
     .text {
       padding: 0.8rem;
-      width: 100%; 
+      width: 100%;
     }
 
     .image {
       padding: 0.8rem;
       margin: 1rem;
-      height: 30rem; 
-      max-width: 100%; 
+      height: 30rem;
+      max-width: 100%;
     }
 
     .tech-container {

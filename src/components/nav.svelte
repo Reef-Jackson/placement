@@ -24,7 +24,7 @@
         <a href="#home" class="menu-item" on:click={toggleMenu}>Home</a>
         <a href="#about" class="menu-item" on:click={toggleMenu}>About Me</a>
         <a href="#tech" class="menu-item" on:click={toggleMenu}>Tech</a>
-        <a href="#" class="menu-item" on:click={toggleMenu}>Contact</a>
+        <a href="#work" class="menu-item" on:click={toggleMenu}>Work</a>
     </div>
   </div>
   
