@@ -35,16 +35,15 @@
     <div class="about-container">
       <div class="text">
         <h3>
-          I'm Reef!<br /><br /> A software engineering student on a perpetual
+          <h1>I'm Reef!</h1><br /><br /> A software engineering student on a perpetual
           quest for knowledge. With a solid academic foundation, technical
           prowess in
           <a href="#tech" on:click|preventDefault={scrollIntoView}
             >various technologies</a
           >, and
-          <a href="#home" on:click|preventDefault={scrollIntoView}
-            ><i>hands-on project experience</i></a
-          >, I thrive on always learning something new. <br /><br />I'm a firm
-          believer in the importance of always learning. Beyond coding, you can
+          hands-on project experience
+          , I thrive on always learning something new. <br /><br />I'm a firm
+          believer in the importance of always learning. <br><br>Beyond coding, you can
           find me immersed in Warhammer40K, Star Wars, and anything that can run
           DOOM.
         </h3>
@@ -55,7 +54,10 @@
   <div class="work-wrapper" id="work">
     <h1 style="text-align: center; color: white;">My Work:</h1>
     <div class="work" id="work">
-    <div class="work-item">Item</div>
+    <div class="work-item" id="bucketlist">
+      <h1>BucketList!</h1>
+      <button>Learn more</button>
+    </div>
     <div class="work-item">item2</div>
     <div class="work-item">item2</div>
     <div class="work-item">item2</div>
@@ -80,11 +82,26 @@
       <button id="js">JavaScript</button>
       <button id="csharp">C#</button>
       <button id="python">Python</button>
+      <button id="sql">SQL</button>
+      <button id="pocketbase">Pocketbase</button>
     </div>
   </div>
 </div>
 
 <style>
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  button {
+    transition: transform .2s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -148,12 +165,7 @@
   }
 
   .text {
-    background: rgb(223, 87, 87);
-    background: linear-gradient(
-      180deg,
-      rgba(223, 87, 87, 1) 0%,
-      rgb(223, 137, 87) 100%
-    );
+    background-color: #df5757;
   }
 
   .image {
@@ -189,7 +201,7 @@
     flex-wrap: 1;
   }
 
-  .tech-container button {
+  button {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding-top: 0.5rem;
@@ -202,6 +214,7 @@
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: transform 0.2s;
+    background-color: #df5757;
   }
 
   .tech-container button:hover {
@@ -251,13 +264,14 @@
   .work-item {
     width: calc(
       33.33% - 2rem
-    ); /* Adjust the width based on your desired layout */
+    ); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     height: 20rem;
     border-radius: 1rem;
-    margin: 1rem; /* Adjust the margin to control spacing */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 1rem; 
     background-image: url("$lib/eva.png");
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: transform 0.2s;
@@ -268,18 +282,30 @@
     transform: scale(1.03);
   }
 
+  
+  .work-item h1 {
+    color: white;
+  }
+
+  #bucketlist {
+    background-image: url('$lib/bucketlist.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
   @media (max-width: 768px) {
     .work-item {
       width: calc(
         50% - 2rem
-      ); /* Two items in a row on screens up to 768px wide */
+      ); 
     }
   }
 
   @media (max-width: 480px) {
     .work-item {
       width: 100%;
-      margin: 0.8rem; /* One item per row on screens up to 480px wide */
+      margin: 0.8rem; 
     }
   }
   @media (max-width: 768px) {
